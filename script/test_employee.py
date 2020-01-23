@@ -78,9 +78,6 @@ class TestEmployee(unittest.TestCase):
     @parameterized.expand(add_build_data)
     def test01_add_emp(self,username,mobile,work_number,status_code,success,code,message):
         #初始化数据
-        # username= 'tom_10'
-        # mobile = "17010001010"
-        # work_number = "1010"
         #请求接口
         result = self.emp.add_emp(username,mobile,work_number)
         logging.info("新增：{}".format(result))
